@@ -89,7 +89,7 @@ class PenrithSpider(scrapy.Spider):
                 lodged_date = y.text.strip().split('\n')[0].replace(':', '').replace("\r", '')
                 time_array = time.strptime(lodged_date, '%d/%m/%Y')
                 temp_data = int(time.mktime(time_array))
-                item["lodged"] = temp_data if lodged_date else NULL
+                item["lodged"] = temp_data if lodged_date else 0
             elif x == "Estimated Cost of Work":
                 y = y.text.strip().split('\n')[0].replace(':', '').replace("\r", '')
                 item["estimated_cost"] = y
