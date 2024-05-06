@@ -10,7 +10,7 @@ class Penrith(Base):
     description = Column(Text, nullable=True, server_default=None)
     category = Column(String(255), nullable=True, server_default=None)
     status = Column(String(255), nullable=True, server_default=None)
-    lodged = Column(Integer, nullable=True, server_default=None)
+    lodged = Column(Integer, nullable=True,)
     estimated_cost = Column(String(255), nullable=True, server_default=None)
     officer = Column(String(255), nullable=True, server_default=None)
     decision = Column(Text, nullable=True, server_default=None)
